@@ -1,0 +1,55 @@
+.btn {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #00FF7F;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .btn:hover:before {
+    width: 100%;
+  }
+  
+  .btn:after {
+    content: '\00bb';
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #FF4500;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .btn:hover:after {
+    width: 100%;
+  }
+  
+  .btn span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn:hover span {
+    transform: scale(1.2);
+  }
