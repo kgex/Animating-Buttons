@@ -1,0 +1,35 @@
+<button class="anime-button">Click Me!</button>
+
+
+.anime-button {
+  background-color: #f2f2f2;
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.anime-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.anime-button:hover:before {
+  width: 200px;
+  height: 200px;
+}
