@@ -1,192 +1,240 @@
-body {
-    align-items: center;
-    display: flex;
-    font-family: sans-serif;
-    font-size: 14px;
-    justify-content: center;
-    height: 100vh;
+* {
+    outline: none;
   }
-  .container {
-    align-items: center;
-    background: #eeedef;
-    display: flex;
-    height: 160px;
-    justify-content: center;
-    position: relative;
-    width: 360px;
+  
+  html,
+  body {
+    height: 100%;
+    min-height: 100%;
   }
-  .bar {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    height: 32px;
-    left: 0;
-    padding: 0 21px;
+  
+  body {
+    margin: 0;
+    background-color: #f44336;
+  }
+  
+  body,
+  input {
+    cursor: url(http://k003.kiwi6.com/hotlink/vp054ir5gt/c1.png) 32 32, auto;
+    cursor: -webkit-image-set(url(http://k003.kiwi6.com/hotlink/vp054ir5gt/c1.png) 1x,url(http://k003.kiwi6.com/hotlink/z6fy599487/c2.png) 2x) 32 32, auto;
+  }
+  
+  body:active,
+  input:active {
+    cursor: url(http://k003.kiwi6.com/hotlink/3p6w4icbzt/c1a.png) 32 32, auto;
+    cursor: -webkit-image-set( url(http://k003.kiwi6.com/hotlink/3p6w4icbzt/c1a.png) 1x, url(http://k003.kiwi6.com/hotlink/6ma7828al1/c2a.png) 2x ) 32 32, auto;
+  }
+  
+  #app-cover {
     position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 196px;
+    height: 196px;
+    margin: -98px auto 0 auto;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #feeeed;
+    overflow: hidden;
+  }
+  
+  #checkbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    z-index: 3;
   }
-  .bar-purple {
-    background: #6000ea;
-    color: white;
-    clip-path: polygon(
-      360px 0,
-      360px 32px,
-      43px 32px,
-      39.775442px 31.67494px,
-      36.772078px 30.74264px,
-      34.054248px 29.26745px,
-      31.686292px 27.31371px,
-      29.732549px 24.94575px,
-      28.257359px 22.22792px,
-      27.325063px 19.22456px,
-      27px 16px,
-      27.325063px 12.77544px,
-      28.257359px 9.77208px,
-      29.732549px 7.05425px,
-      31.686292px 4.68629px,
-      34.054248px 2.73255px,
-      36.772078px 1.25736px,
-      39.775442px 0.32506px,
-      43px 0
-    );
-    transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  #bin-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 42px;
+    height: 58px;
+    margin: -29px auto 0 auto;
+    border-radius: 50%;
+    z-index: 2;
   }
-  .option {
-    cursor: pointer;
-    line-height: 142px;
-    text-align: center;
-    width: 33.33%;
+  
+  #lid {
+    position: relative;
+    width: 50px;
+    height: 4px;
+    left: -4px;
+    border-radius: 4px;
   }
-  .bar-outer {
-    clip-path: polygon(0 0, 120px 0, 120px 32px, 0 32px);
-    clip-path: polygon(
-      0 0,
-      0 32px,
-      104px 32px,
-      107.22456px 31.67494px,
-      110.22792px 30.74264px,
-      112.94575px 29.26745px,
-      115.31371px 27.31371px,
-      117.26745px 24.94575px,
-      118.74264px 22.22792px,
-      119.67494px 19.22456px,
-      120px 16px,
-      119.67494px 12.77544px,
-      118.74264px 9.77208px,
-      117.26745px 7.05425px,
-      115.31371px 4.68629px,
-      112.94575px 2.73255px,
-      110.22792px 1.25736px,
-      107.22456px 0.32506px,
-      104px 0
-    );
-    height: 32px;
-    pointer-events: none;
-    transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
+  
+  #lid:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 0;
+    left: 0;
+    width: 10px;
+    height: 6px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
   }
-  .bar-outer.pos2 .bar-purple {
-    clip-path: polygon(
-      360px 0,
-      360px 32px,
-      149px 32px,
-      145.775442px 31.67494px,
-      142.772078px 30.74264px,
-      140.054248px 29.26745px,
-      137.686292px 27.31371px,
-      135.732549px 24.94575px,
-      134.257359px 22.22792px,
-      133.325063px 19.22456px,
-      133px 16px,
-      133.325063px 12.77544px,
-      134.257359px 9.77208px,
-      135.732549px 7.05425px,
-      137.686292px 4.68629px,
-      140.054248px 2.73255px,
-      142.772078px 1.25736px,
-      145.775442px 0.32506px,
-      149px 0
-    );
+  
+  #box {
+    position: relative;
+    height: 52px;
+    margin-top: 2px;
+    border-radius: 0 0 8px 8px;
   }
-  .bar-outer.pos2 {
-    clip-path: polygon(
-      0 0,
-      0 32px,
-      210px 32px,
-      213.22456px 31.67494px,
-      216.22792px 30.74264px,
-      218.94575px 29.26745px,
-      221.31371px 27.31371px,
-      223.26745px 24.94575px,
-      224.74264px 22.22792px,
-      225.67494px 19.22456px,
-      226px 16px,
-      225.67494px 12.77544px,
-      224.74264px 9.77208px,
-      223.26745px 7.05425px,
-      221.31371px 4.68629px,
-      218.94575px 2.73255px,
-      216.22792px 1.25736px,
-      213.22456px 0.32506px,
-      210px 0
-    );
+  
+  #box-inner {
+    position: relative;
+    top: 4px;
+    width: 34px;
+    height: 44px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
   }
-  .bar-outer.pos3 .bar-purple {
-    clip-path: polygon(
-      360px 0,
-      360px 32px,
-      256px 32px,
-      252.775442px 31.67494px,
-      249.772078px 30.74264px,
-      247.054248px 29.26745px,
-      244.686292px 27.31371px,
-      242.732549px 24.94575px,
-      241.257359px 22.22792px,
-      240.325063px 19.22456px,
-      240px 16px,
-      240.325063px 12.77544px,
-      241.257359px 9.77208px,
-      242.732549px 7.05425px,
-      244.686292px 4.68629px,
-      247.054248px 2.73255px,
-      249.772078px 1.25736px,
-      252.775442px 0.32506px,
-      256px 0
-    );
+  
+  #bin-lines {
+    position: relative;
+    top: 7px;
+    margin: 0 auto;
   }
-  .bar-outer.pos3 {
-    clip-path: polygon(0 0, 333px 0, 333px 32px, 0 32px);
-    clip-path: polygon(
-      0 0,
-      0 32px,
-      317px 32px,
-      320.22456px 31.67494px,
-      323.22792px 30.74264px,
-      325.94575px 29.26745px,
-      328.31371px 27.31371px,
-      330.26745px 24.94575px,
-      331.74264px 22.22792px,
-      332.67494px 19.22456px,
-      333px 16px,
-      332.67494px 12.77544px,
-      331.74264px 9.77208px,
-      330.26745px 7.05425px,
-      328.31371px 4.68629px,
-      325.94575px 2.73255px,
-      323.22792px 1.25736px,
-      320.22456px 0.32506px,
-      317px 0
-    );
+  
+  #bin-lines,
+  #bin-lines:before,
+  #bin-lines:after {
+    width: 3px;
+    height: 30px;
+    border-radius: 4px;
   }
-  .bar-outer.left .bar-purple {
-    transition-delay: 0;
+  
+  #bin-lines:before,
+  #bin-lines:after {
+    content: "";
+    position: absolute;
   }
-  .bar-outer.left {
-    transition-delay: 80ms;
+  
+  #bin-lines:before {
+    left: -10px;
   }
-  .bar-outer.right .bar-purple {
-    transition-delay: 80ms;
+  
+  #bin-lines:after {
+    left: 10px;
   }
-  .bar-outer.right {
-    transition-delay: 0;
+  
+  #layer {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.25s ease all;
+    z-index: 1;
   }
+  
+  #lid,
+  #lid:before,
+  #box,
+  #bin-lines,
+  #bin-lines:before,
+  #bin-lines:after {
+    background-color: #f44336;
+    transition: 0.2s ease background-color;
+  }
+  
+  #checkbox:checked ~ #bin-icon #lid,
+  #checkbox:checked ~ #bin-icon #lid:before,
+  #checkbox:checked ~ #bin-icon #box,
+  #checkbox:checked ~ #bin-icon #box-inner {
+    background-color: #fff;
+  }
+  
+  #checkbox:checked ~ #bin-icon #bin-lines,
+  #checkbox:checked ~ #bin-icon #bin-lines:before,
+  #checkbox:checked ~ #bin-icon #bin-lines:after {
+    background-color: #03a9f4;
+  }
+  
+  #checkbox:checked + #bin-icon #box {
+    animation: shake 0.2s ease 0.1s;
+  }
+  
+  #checkbox:checked + #bin-icon #lid {
+    animation: lift-up 0.8s ease 0.1s, shake_u 0.8s ease 0.1s,
+      shake_l 0.2s ease 0.8s;
+  }
+  
+  #checkbox:checked ~ #layer {
+    width: 226px;
+    height: 226px;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: rotateZ(3deg);
+    }
+    25% {
+      transform: rotateZ(0);
+    }
+    75% {
+      transform: rotateZ(-3deg);
+    }
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  @keyframes lift-up {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -35px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  @keyframes shake_u {
+    0% {
+      transform: rotateZ(0);
+    }
+    25% {
+      transform: rotateZ(-15deg);
+    }
+    50% {
+      transform: rotateZ(0deg);
+    }
+    75% {
+      transform: rotateZ(15deg);
+    }
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  @keyframes shake_l {
+    0% {
+      transform: rotateZ(0);
+    }
+    80% {
+      transform: rotateZ(3deg);
+    }
+    90% {
+      transform: rotateZ(-3deg);
+    }
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+  
