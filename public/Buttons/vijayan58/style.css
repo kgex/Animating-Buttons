@@ -37,10 +37,7 @@ button {
 	border: 2px solid rgb(248, 241, 241);
 	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
 	transition: 500ms;
-    font-style: global(body) {
-        /* this will apply to <body> */
-        /* your styles go here */
-    };
+    font-style: global(body);
     
 }
 
