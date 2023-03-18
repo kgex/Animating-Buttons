@@ -1,36 +1,36 @@
 * {
-  padding: 0;
+  padding: 50;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #fff;
+  background:grey;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 button
 {
-    background-color: aquamarine;
+    background-color:whitesmoke;
+  
     width: 140px;
     height: 70px;
     border-radius: 17px;
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
     letter-spacing: 1px;
 }
 button:hover
 {
     cursor: pointer;
-    scale: 1.2;
+    scale: 2px;;
     box-shadow: 5px 5px 5px;
     animation-name: example;
     animation-duration: 4s;
 }
 @keyframes example {
     0%   {background-color: red;}
-    25%  {background-color: yellow;}
     50%  {background-color: orange;}
-    100% {background-color: green;}
 }
