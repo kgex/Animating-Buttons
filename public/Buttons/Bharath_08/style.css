@@ -1,0 +1,91 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://explore.zoom.us/docs/ent/virtual-bg-list/assets/img/Seasonal/christmas-02.png);
+    background-size: cover;
+}
+.p{
+    font-family: 'Satisfy', cursive;
+}
+
+/* div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4.3rem;
+    /* background-color: cornsilk; */
+    /* border: 1px solid red; */
+
+   
+/* }  */
+
+button{
+    padding: 10px;
+   margin: 10px;
+    font-size: 16;
+    color: aliceblue;
+    text-align:center;
+    border: 3px solid ;
+   border-radius: 500%;
+   font-weight: 800;
+   background-color:salmon;
+  transition-duration: 0.4s;
+    cursor:crosshair;
+   
+}
+
+ .button:hover{
+    background-color: rgb(180, 112, 224);
+    
+    box-shadow:0 120px 160px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+} 
+
+.button span {
+    cursor: crosshair; 
+    display:grid;
+    position: relative;
+    transition: 0.3s;
+   
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right:   -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right:  50px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button :active{
+   
+    transform: translateY(4px);
+
+  }
+
+
+  @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
