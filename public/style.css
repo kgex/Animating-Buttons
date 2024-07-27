@@ -1,0 +1,26 @@
+.animated-button {
+	background-color: #ff0000;
+	border: none;
+	color: white;
+	padding: 50px 300px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 36px;
+	margin: 500px 700px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.animated-button:hover {
+	background-color: white;
+	color: #ffea00;
+	box-shadow: 0 0 10px #252925;
+}
+
+.animated-button:active {
+	background-color: #4CAF50;
+	color: white;
+	transform: translateY(2px);
+	box-shadow: 0 0 50px #e2e7e3;
+}
